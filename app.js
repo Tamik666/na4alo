@@ -1,13 +1,30 @@
 const payrate = 80*5;
-const money = `payrate=${payrate/5}, salary per day=${payrate}`;
+const money = `PayRate=${payrate/5}, salary per day=${payrate}`;
 console.log(money);
-const dayon = 40/5;
-const dedline = (11-2);
-const request = `i need to request for this job-${payrate*dayon}`;
+const workhours = 40;
+const workdays = workhours/5
+const workdaysinweek = 5;
+const workhoursinday = 5;
+const holydays = 2;
+const dedline = 11 - holydays;
+const request = `i need to request for this job-${payrate*workdays} da11Arav`;
 console.log(request);
-const daysable = `${dedline} days on, 5 hrs per day, weeks ${dedline/5}`;
+const daysable = `${dedline} work days and ${holydays} holydays, 5 work hours per day or ${dedline/5} work weeks`;
 console.log(daysable);
-const willibeable = `will i be able? ${dayon < dedline}`;
+const able1 = workdays < dedline;
+const able2 = (able1 > 0 ? 'yes sir' : 'no sir');
+const willibeable = `will i be able? ${able2}`;
 console.log(willibeable);
-const needtowork = `i need to work ${dayon} days, or ${dayon/5} weeks, or ${dayon*5} hrs per week during ${dayon/5} weeks or ${dayon*5} hours`
-console.log(needtowork);
+const busyweeks = workdays/5;
+const needtowork = `to able i need to work ${workdays} days, or ${busyweeks} weeks, or ${workdaysinweek*workhoursinday} hours in week during ${busyweeks} weeks or ${workhours} hours in total `;
+
+const cash = 50;
+
+if (cash >= 50){
+    console.log(`delaigo bi9agyn`)
+}   else if (cash>=20){
+    console.log(`mozhesh moy khuy otsosat' za kopeyki eti`)
+}
+    else{
+    console.log(`idi da nahuy rodnoi`)
+}
